@@ -1,0 +1,155 @@
+import Link from "next/link";
+import ButtonDemo from "@/components/ui/ButtonDemo";
+import CardDemo from "@/components/ui/CardDemo";
+import ModalDemo from "@/components/ui/ModalDemo";
+import Tabs from "@/components/ui/Tabs";
+import Accordion from "@/components/ui/Accordion";
+import AlertDemo from "@/components/ui/AlertDemo";
+import NavbarDemo from "@/components/ui/NavbarDemo";
+import HeroDemo from "@/components/ui/HeroDemo";
+import FormControlsDemo from "@/components/ui/FormControlsDemo";
+import DropdownDemo from "@/components/ui/DropdownDemo";
+import TooltipDemo from "@/components/ui/TooltipDemo";
+import BadgeDemo from "@/components/ui/BadgeDemo";
+import PaginationDemo from "@/components/ui/PaginationDemo";
+//import SpinnerDemo from "@/components/ui/SpinnerDemo";
+import BreadcrumbDemo from "@/components/ui/BreadcrumbDemo";
+//import FooterDemo from "@/components/ui/FooterDemo";
+import AvatarDemo from "@/components/ui/AvatarDemo";
+import ToastDemo from "@/components/ui/ToastDemo";
+import DatepickerDemo from "@/components/ui/DatepickerDemo";
+import CarouselDemo from "@/components/ui/CarouselDemo";
+
+
+const componentsList = [
+  {
+    name: "Navbar",
+    description: "Responsive navigation bar with mobile toggle.",
+    category: "Navigation",
+    href: "/docs/navbar",
+    Demo: NavbarDemo,
+  },
+  {
+    name: "Button",
+    description: "Interactive buttons for actions and navigation.",
+    href: "/docs/button",
+    Demo: ButtonDemo,
+  },
+  {
+    name: "Card",
+    description: "Flexible container for displaying grouped content.",
+    href: "/docs/card",
+    Demo: CardDemo,
+  },
+  {
+    name: "Modal",
+    description: "Dialog overlays for focused user interactions.",
+    href: "/docs/modal",
+    Demo: ModalDemo,
+  },
+  {
+    name: "Tabs",
+    description: "Organize content into multiple views using tabs.",
+    href: "/docs/tabs",
+    Demo: Tabs,
+  },
+  {
+    name: "Accordion",
+    description: "Expand and collapse sections to show or hide content.",
+    href: "/docs/accordion",
+    Demo: Accordion,
+  },
+  {
+    name: "Alert",
+    description: "Display important messages or warnings to users.",
+    href: "/docs/alert",
+    Demo: AlertDemo,
+  },
+  {
+    name: "Hero",
+    description: "Eye-catching hero section for landing pages.",
+    href: "/docs/hero",
+    Demo: HeroDemo,
+  },
+  {
+    name: "Form Controls",
+    description: "Input, select, checkbox, and radio controls.",
+    href: "/docs/form-controls",
+    Demo: FormControlsDemo,
+  },
+  {
+    name: "Dropdown Menu",
+    description: "Toggleable dropdown menu for options.",
+    href: "/docs/dropdown",
+    Demo: DropdownDemo,
+  },
+  {
+    name: "Tooltip",
+    description: "Hover or focus tooltip for extra info.",
+    href: "/docs/tooltip",
+    Demo: TooltipDemo,
+  },
+  {
+    name: "Badge",
+    description: "Status or count badges.",
+    href: "/docs/badge",
+    Demo: BadgeDemo,
+  },
+  {
+    name: "Pagination",
+    description: "Navigate through paged content.",
+    href: "/docs/pagination",
+    Demo: PaginationDemo,
+  },
+  {
+    name: "Breadcrumb",
+    description: "Navigation breadcrumb trail.",
+    href: "/docs/breadcrumb",
+    Demo: BreadcrumbDemo,
+  },
+  {
+    name: "Avatar",
+    description: "User profile picture display.",
+    href: "/docs/avatar",
+    Demo: AvatarDemo,
+  },
+  {
+    name: "Toast",
+    description: "Temporary notification messages.",
+    href: "/docs/toast",
+    Demo: ToastDemo,
+  },
+  {
+    name: "Datepicker",
+    description: "Select dates from a calendar input.",
+    href: "/docs/datepicker",
+    Demo: DatepickerDemo,
+  },
+  {
+    name: "Carousel",
+    description: "Image or content slider.",
+    href: "/docs/carousel",
+    Demo: CarouselDemo,
+  },
+];
+
+export default function ComponentsPage() {
+  return (
+    <main className="grid gap-8 p-8 md:grid-cols-2">
+      {componentsList.map(({ name, description, href, Demo }) => (
+        <section
+          key={name}
+          className="border rounded-lg p-6 bg-white shadow-sm"
+        >
+          <Link href={href}>
+            <h2 className="text-xl font-bold text-blue-600 hover:underline">
+              {name}
+            </h2>
+          </Link>
+          <p className="text-gray-500 mb-4">{description}</p>
+          <Demo />
+        </section>
+      ))}
+    </main>
+  );
+}
