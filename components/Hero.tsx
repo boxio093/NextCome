@@ -38,13 +38,9 @@ function Hero({}: Props) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <Image
-  src="https://via.placeholder.com/500"
-  alt="Hero Illustration"
-  width={500}
-  height={500}
-  className="w-full max-w-lg mx-auto rounded-xl shadow-2xl"
-/>
+          <div className="w-full max-w-lg mx-auto h-80 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl shadow-2xl flex items-center justify-center text-blue-900 font-bold text-2xl">
+            Hero Image
+          </div>
         </motion.div>
 
       </div>

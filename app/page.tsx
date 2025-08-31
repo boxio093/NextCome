@@ -77,9 +77,9 @@ function AnimatedHero() {
       >
         <motion.h1
           variants={child}
-          className="text-5xl font-bold mb-6 leading-tight bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 bg-clip-text text-transparent"
+          className="text-5xl font-bold mb-6 leading-tight"
         >
-          Welcome to <span className="text-amber-400 ">MyApp</span>
+          Welcome to <span className="text-indigo-600">MyApp</span>
         </motion.h1>
 
         <motion.p
@@ -96,17 +96,13 @@ function AnimatedHero() {
         >
           <Link
             href="/about"
-            className="inline-block px-8 py-3 rounded-md bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white font-semibold hover:bg-indigo-700 transition"
+            className="inline-block px-8 py-3 rounded-md bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition"
           >
             About Us
           </Link>
           <Link
             href="/contact"
-            className="inline-block px-8 py-3 rounded-md border border-gray-800 
-              bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 
-              bg-clip-text text-transparent font-semibold 
-              hover:bg-indigo-500 transition 
-              dark:border-indigo-400 dark:text-indigo-400 dark:hover:bg-gray-800"
+            className="inline-block px-8 py-3 rounded-md border border-indigo-600 text-indigo-600 font-semibold hover:bg-indigo-50 transition dark:border-indigo-400 dark:text-indigo-400 dark:hover:bg-gray-800"
           >
             Contact Us
           </Link>
@@ -128,14 +124,9 @@ function AnimatedHero() {
               : { duration: 4, repeat: Infinity, ease: "easeInOut" }
           }
         >
-          <Image
-            src="/superhero-standing-front-sunburst_603843-1871.avif"
-            alt="Hero Illustration"
-            className="w-full h-auto rounded-lg shadow-lg"
-            width={720}
-            height={540}
-            priority
-          />
+          <div className="w-full h-80 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg shadow-lg flex items-center justify-center text-white font-bold text-2xl">
+            Hero Illustration
+          </div>
         </motion.div>
       </motion.div>
     </section>

@@ -6,49 +6,37 @@ import Image from "next/image";
 
 const blogPosts = [
   {
+    slug: "healthy-spine-exercises",
     title: "5 Exercises for a Healthy Spine",
     excerpt:
       "Learn the best exercises to keep your spine strong and flexible, reducing back pain risks.",
     image: "/blog-1.jpg",
-    slug: "healthy-spine-exercises",
+    date: "2025-07-15",
   },
-   {
-    slug: "supabase-nextjs-integration",
-    title: "Integrating Supabase with Next.js",
-    excerpt: "Learn how to connect your Next.js app to Supabase for authentication and database management.",
-    date: "2025-07-28",
-    image: "/blog/supabase.jpg",
-  },
-   {
-    slug: "supabase-nextjs-integration",
-    title: "Integrating Supabase with Next.js",
-    excerpt: "Learn how to connect your Next.js app to Supabase for authentication and database management.",
-    date: "2025-07-28",
-    image: "/blog/supabase.jpg",
-  },
-   {
-    slug: "supabase-nextjs-integration",
-    title: "Integrating Supabase with Next.js",
-    excerpt: "Learn how to connect your Next.js app to Supabase for authentication and database management.",
-    date: "2025-07-28",
-    image: "/blog/supabase.jpg",
-  },
-  
   {
+    slug: "supabase-nextjs-integration",
+    title: "Integrating Supabase with Next.js",
+    excerpt: "Learn how to connect your Next.js app to Supabase for authentication and database management.",
+    date: "2025-07-28",
+    image: "/blog/supabase.jpg",
+  },
+  {
+    slug: "knee-replacement-surgery",
     title: "Understanding Knee Replacement Surgery",
     excerpt:
       "We break down the steps, recovery time, and benefits of modern knee replacement techniques.",
     image: "/blog-2.jpg",
-    slug: "knee-replacement-surgery",
+    date: "2025-07-10",
   },
   {
+    slug: "sleeping-positions-spine-health",
     title: "Best Sleeping Positions for Spine Health",
     excerpt:
       "Discover how your sleeping posture can help reduce back pain and improve recovery.",
     image: "/blog-3.jpg",
-    slug: "sleeping-positions-spine-health",
+    date: "2025-07-05",
   },
-   {
+  {
     slug: "getting-started-nextjs-15",
     title: "Getting Started with Next.js 15",
     excerpt: "Learn how to build modern web apps with Next.js 15 using Turbopack and Server Components.",
@@ -61,13 +49,6 @@ const blogPosts = [
     excerpt: "Discover tips and tricks for building scalable and maintainable designs with Tailwind CSS.",
     date: "2025-07-20",
     image: "/blog/tailwind.jpg",
-  },
-  {
-    slug: "supabase-nextjs-integration",
-    title: "Integrating Supabase with Next.js",
-    excerpt: "Learn how to connect your Next.js app to Supabase for authentication and database management.",
-    date: "2025-07-28",
-    image: "/blog/supabase.jpg",
   },
 ];
 
@@ -85,7 +66,7 @@ export default function BlogPage() {
           Our <span className="text-indigo-600">Blog</span>
         </h1>
         <p className="text-xl text-gray-700 dark:text-gray-300">
-          Insights, tips, and the latest news in orthopedic and spine care.
+          Insights, tips, and the latest news in web development and technology.
         </p>
       </motion.section>
 
@@ -100,12 +81,9 @@ export default function BlogPage() {
             className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition"
           >
             <div className="relative w-full h-56">
-              <Image
-                src={post.image}
-                alt={post.title}
-                fill
-                className="object-cover"
-              />
+              <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-bold text-lg">
+                Blog Image
+              </div>
             </div>
             <div className="p-6">
               <h2 className="text-2xl font-semibold mb-3">{post.title}</h2>

@@ -43,13 +43,9 @@ export default function AboutPage() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="rounded-xl overflow-hidden shadow-xl"
           >
-            <Image
-              src="/team-photo.jpg"
-              alt="Team photo"
-              width={500}
-              height={400}
-              className="w-full h-auto object-cover"
-            />
+            <div className="w-full h-80 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-2xl font-bold">
+              Team Photo
+            </div>
           </motion.div>
         </div>
       </section>
@@ -123,14 +119,8 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
                 className="text-center"
               >
-                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-lg border-2 border-yellow-400">
-                  <Image
-                    src={member.img}
-                    alt={member.name}
-                    width={128}
-                    height={128}
-                    className="object-cover w-full h-full"
-                  />
+                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-lg border-2 border-yellow-400 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-bold">
+                  {member.name.split(' ').map(n => n[0]).join('')}
                 </div>
                 <h4 className="text-lg font-semibold mt-4">{member.name}</h4>
                 <p className="text-gray-400">{member.role}</p>

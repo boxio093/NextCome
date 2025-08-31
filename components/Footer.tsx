@@ -1,12 +1,11 @@
-"use client"; // Add this at the top of Footer.tsx
+"use client";
 
-// components/Footer.tsx
 import Link from "next/link";
 import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12">
+    <footer className="bg-gray-900 text-gray-300 py-12 mt-auto">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* About Section */}
         <div>
